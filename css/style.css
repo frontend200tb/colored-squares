@@ -96,7 +96,6 @@ MAIN
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--middle);
   max-width: 100%;
   min-width: 600px;
   min-height: 600px;

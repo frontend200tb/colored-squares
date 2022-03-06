@@ -1,4 +1,4 @@
-console.log('start frontend200tb three elements');
+console.log('start frontend200tb colored squares');
 
 
 /*****************
@@ -21,35 +21,20 @@ let colors = ['#ff0000', '#800000', '#ffff00', '#808000', '#00ff00', '#008000', 
 /*****************
 Функции
 *****************/
-function show($el) {
-  $el.classList.remove('hide')
-}
-
-function hide($el) {
-  $el.classList.add('hide')
-}
-
-
-function setGameScore() {
-  result.textContent = currentScore.toString()
-}
-
-
 function renderBox(count) {
   for (let i = 1; i <= count; i++) {
-  let box = document.createElement('div');
-    let gameSize = playground.getBoundingClientRect()
+    let box = document.createElement('div');
+    let gameSize = playground.getBoundingClientRect();
     let maxTop = gameSize.height - 10;
     let maxLeft = gameSize.width - 10;
-    let randomColorIndex = getRandom(0, colors.length)
-  console.log(randomColorIndex)
-    box.style.height = box.style.width = squareSize + 'px'
-    box.style.position = 'absolute'
-    box.style.backgroundColor = colors[randomColorIndex]
-    box.style.top = getRandom(0, maxTop) + 'px'
-    box.style.left = getRandom(0, maxLeft) + 'px'
-    box.style.cursor = 'pointer'
-    box.setAttribute('data-box', 'true')
+    let randomColorIndex = getRandom(0, colors.length);
+    box.style.height = box.style.width = squareSize + 'px';
+    box.style.position = 'absolute';
+    box.style.backgroundColor = colors[randomColorIndex];
+    box.style.top = getRandom(0, maxTop) + 'px';
+    box.style.left = getRandom(0, maxLeft) + 'px';
+    box.style.cursor = 'pointer';
+    box.setAttribute('data-box', 'true');
 
     playground.insertAdjacentElement('afterbegin', box)
   }
@@ -66,11 +51,9 @@ const start = () => {
 }
 
 
-
-
 /*****************
 События
 *****************/
 h1.addEventListener('click', start)
 
-console.log('end frontend200tb three elements');
+console.log('end frontend200tb colored squares');
